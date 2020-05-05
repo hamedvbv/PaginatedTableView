@@ -43,7 +43,7 @@ public class PaginatedTableView: UITableView {
     public var pageSize = 20
     private var hasMoreData = true
     private(set) var currentPage = 1
-    private(set) var isLoading = false
+    public var isLoading = false
     
     // First page can vary for different APIs thus can be changed from the VC
     public var firstPage = 1
