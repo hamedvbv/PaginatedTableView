@@ -50,10 +50,9 @@ public class PaginatedTableView: UITableView {
     
     // Table view settings
     private var sections = 0
-    public var loadMoreViewHeight: CGFloat = 200
+    public var loadMoreViewHeight: CGFloat = 100
     public var heightForHeaderInSection: CGFloat = 0
     public var titleForHeaderInSection = ""
-    public var loadMoreBackColor: UIColor = .init(white: 1, alpha: 0)
 
     public var pullToRefreshTitle: NSAttributedString? = nil {
         didSet {
@@ -194,7 +193,6 @@ extension PaginatedTableView: UITableViewDataSource, UITableViewDelegate {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? LoadMoreCell else {
                 fatalError("The dequeued cell is not an instance of LoadMoreCell.")
             }
-            cell.backgroundColor = loadMoreBackColor
             cell.activityIndicator.hidesWhenStopped = true
             if self.isLoading {
                 cell.activityIndicator.startAnimating()
