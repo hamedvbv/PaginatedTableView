@@ -50,7 +50,7 @@ public class PaginatedTableView: UITableView {
     
     // Table view settings
     private var sections = 0
-    public var loadMoreViewHeight: CGFloat = 100
+    public var loadMoreViewHeight: CGFloat = 200
     public var heightForHeaderInSection: CGFloat = 0
     public var titleForHeaderInSection = ""
     
